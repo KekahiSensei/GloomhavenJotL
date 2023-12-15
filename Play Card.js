@@ -5,28 +5,22 @@ let userCombatant = game.combat.combatants.filter(x => x.actorId == userActor[0]
 let combatantId = userCombatant[0]._id;
 
 //get player card stacks and played card data
-let revealedHand = game.cards.filter(x => x.name === "Revealed cards (" + userName + ")")
 let playedCards = game.cards.filter(x => x.name === ("Revealed cards (" + userName + ")"))
 let card1 = playedCards[0]._source.cards[0].name;
 let card2 = playedCards[0]._source.cards[1].name;
-let card1Init = playedCards[0]._source.cards[0].value;
-let card2Init = playedCards[0]._source.cards[1].value;
-let initiative = Math.min(card1Init, card2Init);
+let initiative = Math.min(playedCards[0]._source.cards[0].value, playedCards[0]._source.cards[1].value);
 
 //for testing
 console.log("User Name is: " + userName);
 console.log("User Actor is: " + userActor[0].name);
-console.log("Revealed Hand is: " + revealedHand);
 console.log("Played cards are: " + card1 + " and " + card2);
-console.log("Card 1 initiative is: " + card1Init);
-console.log("Card 2 initiative is: " + card2Init);
 console.log("Initiative is: " + initiative);
 
 playCard();
 
 function playCard () {
 
-if (revealedHand[0]._source.cards.length != 2) {
+if (playedCards[0]._source.cards.length != 2) {
     ui.notifications.warn("Must have 2 cards in play")
 } else {
 
