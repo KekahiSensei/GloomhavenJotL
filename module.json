@@ -14,8 +14,8 @@
 		"minimum": "11",
 		"verified": "11"
 	},
-	"esmodules": ["Combat.js"],
-	"styles": ["gjotl.css"],
+	"esmodules": "gloomhaven-jotl.js",
+	"styles": "gjotl.css",
 	"languages": [
 		{
 			"lang": "en",
