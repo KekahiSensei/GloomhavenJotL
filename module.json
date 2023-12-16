@@ -1,0 +1,29 @@
+{
+	"name": "gloomhaven-jaws-of-the-lion",
+	"title": "Gloomhaven Jaws of the Lion",
+	"description": "A comprehensive QoL module for running Gloomhaven Jaws of the Lion",
+	"authors": [
+		{
+			"name": "MDylan Simons",
+			"discord": "kekahisensei",
+		}
+	],
+	"url": "https://github.com/KekahiSensei/GloomhavenJotL",
+	"version": "1.0",
+	"compatibility": {
+		"minimum": "11",
+		"verified": "11"
+	},
+	"esmodules": ["Combat.js"],
+	"styles": ["gjotl.css"],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "langs/en.json"
+		}
+	],
+	"socket": true,
+	"manifest": "https://github.com/KekahiSensei/GloomhavenJotL/blob/main/module.json",
+	"download": "https://github.com/KekahiSensei/GloomhavenJotL/blob/main/module.zip"
+}
